@@ -1,0 +1,33 @@
+services:
+  nas-dashboard:
+    image: nas-dashboard:latest
+    container_name: nas-dashboard
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_PATH=/app/data/database.sqlite
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    networks:
+      - nas-network
+    labels:
+      - "com.docker.compose.project=nas-dashboard"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/system/info"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  nas-network:
+    driver: bridge
+
+volumes:
+  nas-data:
+    driver: local

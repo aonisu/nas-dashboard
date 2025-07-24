@@ -1,0 +1,27 @@
+services:
+  nas-dashboard:
+    build: .
+    container_name: nas-dashboard
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_PATH=/app/data/database.sqlite
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    networks:
+      - nas-network
+    labels:
+      - "com.docker.compose.project=nas-dashboard"
+
+networks:
+  nas-network:
+    driver: bridge
+
+volumes:
+  nas-data:
+    driver: local
