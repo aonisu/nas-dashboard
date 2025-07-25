@@ -17,7 +17,7 @@ fi
 
 # 配置变量
 CONTAINER_NAME="nas-dashboard"
-IMAGE_NAME="ghcr.io/yourusername/nas-dashboard:latest"  # 替换为实际镜像
+IMAGE_NAME="aonisu/nas-dashboard:latest"
 DATA_DIR="/volume1/docker/nas-dashboard/data"
 PORT="3000"
 

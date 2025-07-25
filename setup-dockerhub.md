@@ -5,7 +5,7 @@
 1. **注册 Docker Hub**
    - 访问 https://hub.docker.com
    - 点击 "Sign Up" 创建免费账号
-   - 记住您的用户名（例如：`yourname`）
+   - 记住您的用户名（例如：`aonisu`）
 
 2. **创建仓库**
    - 登录后点击 "Create Repository"
@@ -44,7 +44,7 @@
    **Secret 1:**
    ```
    Name: DOCKER_USERNAME
-   Secret: 您的Docker Hub用户名（例如：yourname）
+   Secret: 您的Docker Hub用户名（例如：aonisu）
    ```
    
    **Secret 2:**
@@ -61,14 +61,14 @@
 
 ### 1. 更新 install.sh
 ```bash
-# 将文件中的 yourname 替换为您的 Docker Hub 用户名
-IMAGE_NAME="yourname/nas-dashboard:latest"
+# 将文件中的 aonisu 替换为您的 Docker Hub 用户名
+IMAGE_NAME="aonisu/nas-dashboard:latest"
 ```
 
 ### 2. 更新 docker-compose.hub.yml
 ```yaml
-# 将文件中的 yourusername 替换为您的 Docker Hub 用户名
-image: yourname/nas-dashboard:latest
+# 将文件中的 aonisu 替换为您的 Docker Hub 用户名
+image: aonisu/nas-dashboard:latest
 ```
 
 ### 3. 更新其他相关文件
@@ -76,4 +76,4 @@ image: yourname/nas-dashboard:latest
 - `先进部署方案.md`
 - `GitHub发布指南.md`
 
-将所有 `yourname` 或 `yourusername` 替换为您的实际 Docker Hub 用户名。
+将所有 `aonisu` 或 `aonisu` 替换为您的实际 Docker Hub 用户名。

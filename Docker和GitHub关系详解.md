@@ -46,8 +46,8 @@ graph LR
 3. **用户安装阶段** (最终用户)
    ```bash
    # 用户一键安装
-   docker pull yourname/nas-dashboard
-   docker run yourname/nas-dashboard
+   docker pull aonisu/nas-dashboard
+   docker run aonisu/nas-dashboard
    ```
 
 ---
@@ -128,10 +128,10 @@ jobs:
 #### 🏷️ 镜像标签策略
 ```bash
 # 不同环境的镜像
-yourname/nas-dashboard:latest      # 最新稳定版
-yourname/nas-dashboard:v1.2.0     # 具体版本
-yourname/nas-dashboard:dev         # 开发版本
-yourname/nas-dashboard:beta        # 测试版本
+aonisu/nas-dashboard:latest      # 最新稳定版
+aonisu/nas-dashboard:v1.2.0     # 具体版本
+aonisu/nas-dashboard:dev         # 开发版本
+aonisu/nas-dashboard:beta        # 测试版本
 ```
 
 #### 📋 镜像优化
@@ -153,10 +153,10 @@ CMD ["npm", "start"]
 #### 🔍 镜像质量管理
 ```bash
 # 镜像扫描安全漏洞
-docker scout cves yourname/nas-dashboard
+docker scout cves aonisu/nas-dashboard
 
 # 镜像大小分析
-docker images yourname/nas-dashboard --format "table {{.Tag}}\t{{.Size}}"
+docker images aonisu/nas-dashboard --format "table {{.Tag}}\t{{.Size}}"
 ```
 
 ---
@@ -207,7 +207,7 @@ git push origin v1.3.0
 #### 周四 - 用户获得更新
 ```bash
 # 用户自动获得最新版本
-docker pull yourname/nas-dashboard:latest
+docker pull aonisu/nas-dashboard:latest
 docker-compose up -d  # 自动更新
 ```
 
@@ -237,7 +237,7 @@ services:
 # docker-compose.prod.yml - 生产环境  
 services:
   nas-dashboard:
-    image: yourname/nas-dashboard:latest
+    image: aonisu/nas-dashboard:latest
     environment:
       - NODE_ENV=production
 ```
@@ -278,7 +278,7 @@ describe('API Tests', () => {
 1. **安装极简**
    ```bash
    # 一条命令安装最新版本
-   docker pull yourname/nas-dashboard
+   docker pull aonisu/nas-dashboard
    ```
 
 2. **更新方便**
@@ -290,7 +290,7 @@ describe('API Tests', () => {
 3. **版本可控**
    ```bash
    # 可选择特定版本
-   docker pull yourname/nas-dashboard:v1.2.0
+   docker pull aonisu/nas-dashboard:v1.2.0
    ```
 
 ---

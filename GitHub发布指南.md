@@ -33,7 +33,7 @@
 cd "/Users/aonisu/Documents/程序设计/claude项目/nas管应用管理平台"
 
 # 添加远程仓库（替换为您的用户名）
-git remote add origin https://github.com/YOUR_USERNAME/nas-dashboard.git
+git remote add origin https://github.com/aonisu/nas-dashboard.git
 
 # 推送代码
 git branch -M main
@@ -44,7 +44,7 @@ git push -u origin main
 
 1. **创建 Docker Hub 账号**
    - 注册 https://hub.docker.com
-   - 创建仓库 `yourname/nas-dashboard`
+   - 创建仓库 `aonisu/nas-dashboard`
 
 2. **配置 GitHub Secrets**
    - GitHub 仓库 → Settings → Secrets and variables → Actions
@@ -64,14 +64,14 @@ git push -u origin main
 ### 方式一：一键安装（最简单）
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/nas-dashboard/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/aonisu/nas-dashboard/main/install.sh | bash
 ```
 
 ### 方式二：Container Manager
 
 1. **注册表搜索**
    - Container Manager → 注册表
-   - 搜索：`yourname/nas-dashboard`
+   - 搜索：`aonisu/nas-dashboard`
    - 下载 latest 标签
 
 2. **启动配置**
@@ -89,7 +89,7 @@ docker run -d \
   -v /volume1/docker/nas-dashboard/data:/app/data \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
   -e NODE_ENV=production \
-  yourname/nas-dashboard:latest
+  aonisu/nas-dashboard:latest
 ```
 
 ## 📊 项目特色功能

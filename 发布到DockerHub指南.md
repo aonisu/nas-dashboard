@@ -11,7 +11,7 @@
 1. **注册 Docker Hub**
    - 访问 https://hub.docker.com/
    - 创建免费账号
-   - 记录用户名（例如：`yourname`）
+   - 记录用户名（例如：`aonisu`）
 
 ### 步骤 2: 创建 GitHub 仓库
 
@@ -21,7 +21,7 @@
    git init
    git add .
    git commit -m "Initial commit: NAS Dashboard"
-   git remote add origin https://github.com/yourusername/nas-dashboard.git
+   git remote add origin https://github.com/aonisu/nas-dashboard.git
    git push -u origin main
    ```
 
@@ -53,7 +53,7 @@
 
 2. **注册表搜索**
    - 点击 "注册表" 标签页
-   - 搜索：`yourname/nas-dashboard`
+   - 搜索：`aonisu/nas-dashboard`
    - 点击 "下载" → 选择 `latest` 标签
 
 3. **启动容器**
@@ -72,7 +72,7 @@
 2. **下载 Compose 文件**
    ```bash
    # 下载官方 compose 文件
-   wget https://raw.githubusercontent.com/yourusername/nas-dashboard/main/docker-compose.hub.yml
+   wget https://raw.githubusercontent.com/aonisu/nas-dashboard/main/docker-compose.hub.yml
    mv docker-compose.hub.yml docker-compose.yml
    ```
 
@@ -98,7 +98,7 @@ docker run -d \
   -e PORT=3000 \
   -e DB_PATH=/app/data/database.sqlite \
   -e TZ=Asia/Shanghai \
-  yourname/nas-dashboard:latest
+  aonisu/nas-dashboard:latest
 ```
 
 ## 🌟 Docker Hub 发布的优势
@@ -138,7 +138,7 @@ git push origin v1.0.0
 ### 用户更新
 ```bash
 # 拉取最新镜像
-docker pull yourname/nas-dashboard:latest
+docker pull aonisu/nas-dashboard:latest
 
 # 重启容器
 docker-compose down && docker-compose up -d
@@ -154,7 +154,7 @@ docker-compose down && docker-compose up -d
 ## 🚀 一键安装（推荐）
 
 ### Container Manager 安装
-1. Container Manager → 注册表 → 搜索 "yourname/nas-dashboard"
+1. Container Manager → 注册表 → 搜索 "aonisu/nas-dashboard"
 2. 下载 latest 标签
 3. 启动容器配置：
    - 端口：3000:3000
@@ -167,7 +167,7 @@ mkdir -p /volume1/docker/nas-dashboard/data
 docker run -d --name nas-dashboard -p 3000:3000 \
   -v /volume1/docker/nas-dashboard/data:/app/data \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  yourname/nas-dashboard:latest
+  aonisu/nas-dashboard:latest
 ```
 
 访问：http://你的NAS_IP:3000

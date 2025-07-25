@@ -30,8 +30,8 @@
 # 确保在项目目录
 cd "/Users/aonisu/Documents/程序设计/claude项目/nas管应用管理平台"
 
-# 添加远程仓库（替换 YOUR_USERNAME 为您的 GitHub 用户名）
-git remote add origin https://github.com/YOUR_USERNAME/nas-dashboard.git
+# 添加远程仓库（替换 aonisu 为您的 GitHub 用户名）
+git remote add origin https://github.com/aonisu/nas-dashboard.git
 
 # 推送代码
 git branch -M main

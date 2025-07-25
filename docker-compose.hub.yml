@@ -1,6 +1,6 @@
 services:
   nas-dashboard:
-    image: yourusername/nas-dashboard:latest  # 替换为您的 Docker Hub 用户名
+    image: aonisu/nas-dashboard:latest
     container_name: nas-dashboard
     ports:
       - "3000:3000"
